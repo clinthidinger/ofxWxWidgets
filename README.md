@@ -1,4 +1,4 @@
 ofxWxWidgets
 ============
 
-openframeworks addon for WxWdigets.
+openframeworks addon for WxWidgets.
