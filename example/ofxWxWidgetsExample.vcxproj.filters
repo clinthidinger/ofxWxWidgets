@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\testApp.cpp" />
+    <ClCompile Include="..\src\ofxAppWxWindow.cpp">
+      <Filter>addons\ofxWxWidgets\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxWxGLCanvas.cpp">
+      <Filter>addons\ofxWxWidgets\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ofxPickableScene\src\ofxPickableScene.cpp">
+      <Filter>addons\ofxPickableScene\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ofxPickableScene\src\ofxViewportCam.cpp">
+      <Filter>addons\ofxPickableScene\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxWxPickableSceneFrame.cpp" />
+    <ClCompile Include="src\ofxWxPickableSceneBase.cpp" />
+    <ClCompile Include="testScene.cpp" />
+    <ClCompile Include="PickableBox.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\testApp.h" />
+    <ClInclude Include="..\src\ofxAppWxWindow.h">
+      <Filter>addons\ofxWxWidgets\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxWxGLCanvas.h">
+      <Filter>addons\ofxWxWidgets\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ofxPickableScene\src\ofxGrid.h">
+      <Filter>addons\ofxPickableScene\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ofxPickableScene\src\ofxIPickable.h">
+      <Filter>addons\ofxPickableScene\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ofxPickableScene\src\ofxPickableScene.h">
+      <Filter>addons\ofxPickableScene\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ofxPickableScene\src\ofxViewportCam.h">
+      <Filter>addons\ofxPickableScene\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxWxPickableSceneBase.h" />
+    <ClInclude Include="src\ofxWxPickableSceneFrame.h" />
+    <ClInclude Include="testScene.h" />
+    <ClInclude Include="PickableBox.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="addons">
+      <UniqueIdentifier>{c024d7db-9775-481e-85e9-9176438f5152}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxWxWidgets">
+      <UniqueIdentifier>{d1d71467-d0e9-4a8c-ab32-5e8c4a129c2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxPickableScene">
+      <UniqueIdentifier>{64a2d312-9e5c-4bec-9a42-62fc9adcaf87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxPickableScene\src">
+      <UniqueIdentifier>{0f68e582-3339-4549-b7fb-e634d7bd1f42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxWxWidgets\src">
+      <UniqueIdentifier>{89133b0c-41aa-493a-b501-873313fa1b0f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

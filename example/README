@@ -1,0 +1,17 @@
+Openframeworks addon for using WxWidgets(http://www.wxwidgets.org/).
+
+--------------
+Installation :
+--------------
+  
+- For windoze: Download and copy the WxWidgets dll's to your bin directory (http://sourceforge.net/projects/wxwindows/files/2.9.4/binaries/).
+
+-------
+Usage :
+-------
+
+The example requires ofxPickableScene, so get that as well if you want to run it.
+
+
+
+Tested with OF 007 Pre and WxWidgets 2.9.4.
