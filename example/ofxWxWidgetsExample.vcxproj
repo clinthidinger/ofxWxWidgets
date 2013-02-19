@@ -120,12 +120,12 @@ if not exist "$(ProjectDir)\bin\data" mkdir  "$(ProjectDir)\bin\data"
     <ClCompile Include="..\..\ofxPickableScene\src\ofxViewportCam.cpp" />
     <ClCompile Include="..\src\ofxAppWxWindow.cpp" />
     <ClCompile Include="..\src\ofxWxGLCanvas.cpp" />
-    <ClCompile Include="PickableBox.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\ofxWxPickableSceneFrame.cpp" />
     <ClCompile Include="src\ofxWxPickableSceneBase.cpp" />
+    <ClCompile Include="src\ofxWxPickableSceneFrame.cpp" />
+    <ClCompile Include="src\PickableBox.cpp" />
     <ClCompile Include="src\testApp.cpp" />
-    <ClCompile Include="testScene.cpp" />
+    <ClCompile Include="src\testScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\ofxPickableScene\src\ofxGrid.h" />
@@ -134,11 +134,11 @@ if not exist "$(ProjectDir)\bin\data" mkdir  "$(ProjectDir)\bin\data"
     <ClInclude Include="..\..\ofxPickableScene\src\ofxViewportCam.h" />
     <ClInclude Include="..\src\ofxAppWxWindow.h" />
     <ClInclude Include="..\src\ofxWxGLCanvas.h" />
-    <ClInclude Include="PickableBox.h" />
-    <ClInclude Include="src\ofxWxPickableSceneFrame.h" />
     <ClInclude Include="src\ofxWxPickableSceneBase.h" />
+    <ClInclude Include="src\ofxWxPickableSceneFrame.h" />
+    <ClInclude Include="src\PickableBox.h" />
     <ClInclude Include="src\testApp.h" />
-    <ClInclude Include="testScene.h" />
+    <ClInclude Include="src\testScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\libs\openFrameworksCompiled\project\vs2010\openframeworksLib.vcxproj">

@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\testApp.cpp" />
     <ClCompile Include="..\src\ofxAppWxWindow.cpp">
       <Filter>addons\ofxWxWidgets\src</Filter>
     </ClCompile>
@@ -15,13 +13,26 @@
     <ClCompile Include="..\..\ofxPickableScene\src\ofxViewportCam.cpp">
       <Filter>addons\ofxPickableScene\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\ofxWxPickableSceneFrame.cpp" />
-    <ClCompile Include="src\ofxWxPickableSceneBase.cpp" />
-    <ClCompile Include="testScene.cpp" />
-    <ClCompile Include="PickableBox.cpp" />
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxWxPickableSceneBase.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxWxPickableSceneFrame.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PickableBox.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\testApp.h" />
     <ClInclude Include="..\src\ofxAppWxWindow.h">
       <Filter>addons\ofxWxWidgets\src</Filter>
     </ClInclude>
@@ -40,10 +51,21 @@
     <ClInclude Include="..\..\ofxPickableScene\src\ofxViewportCam.h">
       <Filter>addons\ofxPickableScene\src</Filter>
     </ClInclude>
-    <ClInclude Include="src\ofxWxPickableSceneBase.h" />
-    <ClInclude Include="src\ofxWxPickableSceneFrame.h" />
-    <ClInclude Include="testScene.h" />
-    <ClInclude Include="PickableBox.h" />
+    <ClInclude Include="src\ofxWxPickableSceneBase.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxWxPickableSceneFrame.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PickableBox.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="addons">
@@ -60,6 +82,9 @@
     </Filter>
     <Filter Include="addons\ofxWxWidgets\src">
       <UniqueIdentifier>{89133b0c-41aa-493a-b501-873313fa1b0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{c037114f-1d44-4a5a-800e-67485633b50f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
