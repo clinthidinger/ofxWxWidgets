@@ -85,8 +85,6 @@ void ofxAppWxWindow::setupOpenGL(int w, int h, int screenMode)
         assert( this->glCanvasSizer != NULL);
         glCanvasSizer->Add(this->glCanvas, 1, wxEXPAND | wxGROW | wxALL, 0);
         this->glCanvasParentWnd->SetSizer(this->glCanvasSizer);
-        // Store cursor size.
-        wxCursor cursor = glCanvas->GetCursor();
     }// end if
 }
 
