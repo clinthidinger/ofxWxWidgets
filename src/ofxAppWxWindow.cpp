@@ -1,3 +1,5 @@
+
+#include "ofxAppWxWindow.h"
 #include <assert.h>
 
 #include "wx/wxprec.h"
@@ -12,7 +14,14 @@
 #include "ofAppRunner.h"
 #include "ofConstants.h"
 #include "ofxWxGLCanvas.h"
-#include "ofxAppWxWindow.h"
+
+#ifndef _WIN32
+#ifdef __MACH__
+#include <GLUT/GLUT.h>
+#else
+#include <GL/glut.h>
+#endif
+#endif
 
 
 
@@ -43,7 +52,8 @@ ofxAppWxWindow::~ofxAppWxWindow()
 //------------------------------------------------------------
 void ofxAppWxWindow::destroy()
 {
-    
+    //glCanvas->DoEnable(false);
+    glCanvas->Destroy();
 }
 
 //------------------------------------------------------------
@@ -63,7 +73,7 @@ void ofxAppWxWindow::setupOpenGL(int w, int h, int screenMode)
     
     if((glCanvas == NULL) && (this->glCanvasParentWnd != NULL))
     {
-#ifdef TARGET_WIN32
+#if defined(TARGET_WIN32) && (WINVER == 0x0701) 
         //! @see http://wiki.wxwidgets.org/WxGLCanvas#Multiple_wxGLCanvases
         //! @note Reparent hack that seems necessary on Windoze 7 at the time of testing.
         wxFrame *frame = new wxFrame(NULL, wxID_ANY, wxT("Hack")); //! @note Not supposed to make a frame on the stack.  Mem should be cleaned when frame is destroyed.
@@ -78,11 +88,24 @@ void ofxAppWxWindow::setupOpenGL(int w, int h, int screenMode)
         frame = NULL;
 #else
         glCanvas = new ofxWxGLCanvas(this->glCanvasParentWnd, w, h);
+        assert(glCanvas != NULL);
         glCanvas->SetCurrent(*this->glCanvas->GetGLContex()); 
+#if defined(TARGET_LINUX)
+        static bool glutInitialized = false;
+        if (!glutInitialized)
+        {
+          char *myargv [1];
+          int myargc=1;
+          myargv [0]=strdup ("ofxAppWxWindow");
+          glutInit(&myargc, myargv);
+        }
+#endif
+
+
 #endif
         // Add sizer.
         this->glCanvasSizer = new wxBoxSizer(wxVERTICAL);
-        assert( this->glCanvasSizer != NULL);
+        assert(this->glCanvasSizer != NULL);
         glCanvasSizer->Add(this->glCanvas, 1, wxEXPAND | wxGROW | wxALL, 0);
         this->glCanvasParentWnd->SetSizer(this->glCanvasSizer);
     }// end if
