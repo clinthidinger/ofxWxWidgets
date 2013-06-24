@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include "ofConstants.h"
 #include "ofAppBaseWindow.h"
 #include "ofEvents.h"
@@ -127,14 +128,14 @@ private:
 
    wxSize         mWxCursorSize;
    int            nFramesSinceWindowResized;
-   int			   windowMode;
-   bool			   bEnableSetupScreen;
+   int			  windowMode;
+   bool			  bEnableSetupScreen;
    ofBaseApp     *ofAppPtr;
    wxWindow      *glCanvasParentWnd;
    ofxWxGLCanvas *glCanvas;
    wxBoxSizer    *glCanvasSizer;
    wxFrame       *topParent;
-
+   
    //! @brief Destroy the window.
    void destroy();
 };
