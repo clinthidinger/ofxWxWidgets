@@ -1,12 +1,16 @@
 
 #include "testScene.h"
+#include <assert.h>
 
 //-----------------------------------------------------------------------------
 testScene::testScene() : grid(ofColor::gray, ofVec3f::zero(), ofVec3f(100.0f, 100.0f, 100.0f), 20.0f)
 {
    PickableBox *box1 = new PickableBox();
+   assert(box1 !=  NULL);
    PickableBox *box2 = new PickableBox();
+   assert(box2 !=  NULL);
    PickableBox *box3 = new PickableBox();
+   assert(box3 !=  NULL);
 
    box1->setGlobalPosition(-30.0f, 0.0, 0.0f);
    box2->setGlobalPosition(0.0f, 30.0, 0.0f);
