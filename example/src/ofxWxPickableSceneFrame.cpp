@@ -1,9 +1,10 @@
 
+#include "ofxWxPickableSceneFrame.h"
 #include <assert.h>
 #include <ofxAppWxWindow.h>
 #include <ofxWxGLCanvas.h>
 #include "testApp.h"
-#include "ofxWxPickableSceneFrame.h"
+
 
 
 //-----------------------------------------------------------------------------
@@ -17,11 +18,11 @@ ofxWxPickableSceneFrame::ofxWxPickableSceneFrame(wxWindow *parent)
 //-----------------------------------------------------------------------------
 ofxWxPickableSceneFrame::~ofxWxPickableSceneFrame()
 {
-   if(window != NULL)
-   {
-      delete window;
-      window = NULL;
-   }
+    if(window != NULL)
+    {
+        delete window;
+        window = NULL;
+    }
 }
 
 //-----------------------------------------------------------------------------
@@ -50,7 +51,5 @@ void ofxWxPickableSceneFrame::initRendering()
     wxSize size = GetSize();
     SetSize(size.x - 1, size.y - 1);
     
-    testApp *app = new testApp(window);
-    assert(app != NULL);
-    ofRunApp(app); // mem leak???
+    ofRunApp(new testApp(window)); // Will be deleted on exit.
 }
