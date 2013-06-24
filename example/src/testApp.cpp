@@ -1,10 +1,9 @@
 
+#include "testApp.h"
 #include <of3dUtils.h>
 #include "ofxAppWxWindow.h"
 #include "ofxWxGLCanvas.h"
-
 #include "testScene.h"
-#include "testApp.h"
 
 
 
@@ -53,6 +52,12 @@ void testApp::draw()
       ofRectangle viewport(ofGetCurrentViewport());
       scene->draw(viewport);
    }
+}
+
+//--------------------------------------------------------------
+void testApp::exit()
+{
+    
 }
 
 //--------------------------------------------------------------
