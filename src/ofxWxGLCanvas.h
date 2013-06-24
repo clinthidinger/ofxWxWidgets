@@ -2,8 +2,9 @@
 #pragma once
 
 #define wxUSE_GLCANVAS 1
-#include <wx/glcanvas.h>
 #include <ofConstants.h>
+#include <wx/glcanvas.h>
+
 
 //! @brief wxGLCanvas for openframeworks.
 //! @note More or less ripped from ofAppGlutWindow with tweaks for Wx.

@@ -1,4 +1,5 @@
 
+#include "ofxWxGLCanvas.h"
 #include <assert.h>
 #include <wx/wxprec.h>
 #include <wx/dir.h>
@@ -12,7 +13,7 @@
 #include "ofGraphics.h"
 #include "ofAppRunner.h"
 #include "ofConstants.h"
-#include "ofxWxGLCanvas.h"
+
 
 
 BEGIN_EVENT_TABLE(ofxWxGLCanvas, wxGLCanvas)
@@ -92,6 +93,7 @@ void ofxWxGLCanvas::OnSize(wxSizeEvent &event)
 //----------------------------------------------------------
 void ofxWxGLCanvas::OnIdle(wxIdleEvent & event)
 {
+    //! @note Copy and paste code from ofAppGlutWindow.
    SetCurrent(*wxGLRC);
 
    if (nFrameCount != 0 && bFrameRateSet == true)
