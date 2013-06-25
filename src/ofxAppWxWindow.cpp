@@ -54,6 +54,7 @@ void ofxAppWxWindow::destroy()
 {
     //glCanvas->DoEnable(false);
     glCanvas->Destroy();
+    glCanvas = NULL;
 }
 
 //------------------------------------------------------------
