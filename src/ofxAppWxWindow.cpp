@@ -132,28 +132,28 @@ void ofxAppWxWindow::initializeWindow()
 //------------------------------------------------------------
 void ofxAppWxWindow::runAppViaInfiniteLoop(ofBaseApp * appPtr)
 {
-	ofAppPtr = appPtr;
+    ofAppPtr = appPtr;
     
-	ofNotifySetup();
-	ofNotifyUpdate();
+    ofNotifySetup();
+    ofNotifyUpdate();
 }
 
 //------------------------------------------------------------
 float ofxAppWxWindow::getFrameRate()
 {
-	return glCanvas->getFrameRate();
+    return glCanvas->getFrameRate();
 }
 
 //------------------------------------------------------------
 double ofxAppWxWindow::getLastFrameTime()
 {
-	return glCanvas->getLastFrameTime();
+    return glCanvas->getLastFrameTime();
 }
 
 //------------------------------------------------------------
 int ofxAppWxWindow::getFrameNum()
 {
-	return glCanvas->getFrameCount();
+    return glCanvas->getFrameCount();
 }
 
 //------------------------------------------------------------
@@ -182,7 +182,7 @@ ofPoint ofxAppWxWindow::getWindowPosition()
 //------------------------------------------------------------
 ofPoint ofxAppWxWindow::getScreenSize()
 {
-	wxSize size(glCanvas->GetClientSize());
+    wxSize size(glCanvas->GetClientSize());
     return ofPoint(size.x, size.y, 0);
 }
 
@@ -211,19 +211,19 @@ int ofxAppWxWindow::getHeight()
 //------------------------------------------------------------
 void ofxAppWxWindow::setOrientation(ofOrientation orientationIn)
 {
-	glCanvas->SetOrientation(orientationIn);
+    glCanvas->SetOrientation(orientationIn);
 }
 
 //------------------------------------------------------------
 ofOrientation ofxAppWxWindow::getOrientation()
 {
-	return glCanvas->GetOrientation();
+    return glCanvas->GetOrientation();
 }
 
 //------------------------------------------------------------
 void ofxAppWxWindow::setWindowPosition(int x, int y)
 {
-	wxPoint point(x, y);
+    wxPoint point(x, y);
     glCanvas->SetPosition(point);
 }
 
@@ -264,25 +264,25 @@ void ofxAppWxWindow::setFrameRate(float targetRate)
 //------------------------------------------------------------
 int ofxAppWxWindow::getWindowMode()
 {
-	return windowMode;
+    return windowMode;
 }
 
 //------------------------------------------------------------
 void ofxAppWxWindow::toggleFullscreen()
 {
-	if(windowMode == OF_GAME_MODE)
+    if(windowMode == OF_GAME_MODE)
     {
         return;
     }
     
-	if(windowMode == OF_WINDOW )
+    if(windowMode == OF_WINDOW )
     {
-		windowMode = OF_FULLSCREEN;
+	windowMode = OF_FULLSCREEN;
     }
     else
     {
-		windowMode = OF_WINDOW;
-	}
+        windowMode = OF_WINDOW;
+    }
     if(topParent != NULL)
     {
         topParent->ShowFullScreen(windowMode == OF_FULLSCREEN);
@@ -315,11 +315,11 @@ void ofxAppWxWindow::setFullscreen(bool fullscreen)
 //------------------------------------------------------------
 void ofxAppWxWindow::enableSetupScreen()
 {
-	bEnableSetupScreen = true;
+    bEnableSetupScreen = true;
 }
 
 //------------------------------------------------------------
 void ofxAppWxWindow::disableSetupScreen()
 {
-	bEnableSetupScreen = false;
+    bEnableSetupScreen = false;
 }
