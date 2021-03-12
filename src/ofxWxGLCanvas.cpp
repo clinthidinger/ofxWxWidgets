@@ -29,7 +29,7 @@ END_EVENT_TABLE()
 
 //----------------------------------------------------------
 ofxWxGLCanvas::ofxWxGLCanvas(wxWindow *parent, int width, int height)
-   : wxGLCanvas(parent, wxID_ANY, wxPoint(-1, -1),	wxSize(width, height), wxSUNKEN_BORDER, wxT("Viewport"), NULL)
+   : wxGLCanvas(parent, wxID_ANY, wxPoint(-1, -1), wxSize(width, height), wxSUNKEN_BORDER, wxT("Viewport"), NULL)
 {
     timeNow          = 0;
     timeThen         = 0;
@@ -38,9 +38,9 @@ ofxWxGLCanvas::ofxWxGLCanvas(wxWindow *parent, int width, int height)
     framesForFPS     = 0;
     bFrameRateSet    = false;
     millisForFrame   = 0;
-    prevMillis			= 0;
-    diffMillis			= 0;
-    lastFrameTime		= 0.0;
+    prevMillis	     = 0;
+    diffMillis	     = 0;
+    lastFrameTime    = 0.0;
     nFrameCount      = 0;
     bDoubleBuffered  = true;
     
@@ -128,12 +128,12 @@ void ofxWxGLCanvas::OnIdle(wxIdleEvent & event)
    double diff = timeNow - timeThen;
    if(diff  > 0.00001)
    {
-      fps			= 1.0 / diff;
+      fps = 1.0 / diff;
       frameRate	*= 0.9f;
       frameRate	+= 0.1f * fps;
    }
-   lastFrameTime	= diff;
-   timeThen		= timeNow;
+   lastFrameTime = diff;
+   timeThen = timeNow;
    // --------------
 
    if(this->bDoAutoRedraw)
