@@ -64,18 +64,18 @@ public:
    void setFrameRate(float targetRate);
 
 private:
-   float 		  frameRate;
-   double		  lastFrameTime;
-   float		     timeNow;
+   float         frameRate;
+   double        lastFrameTime;
+   float         timeNow;
    float         timeThen;
    float         fps;
-   int			  framesForFPS;
-   int			  nFrameCount;
-   bool			  bDoubleBuffered;
-   bool			  bFrameRateSet;
-   int 			  millisForFrame;
-   int 			  prevMillis;
-   int 			  diffMillis;
+   int           framesForFPS;
+   int           nFrameCount;
+   bool          bDoubleBuffered;
+   bool          bFrameRateSet;
+   int           millisForFrame;
+   int           prevMillis;
+   int           diffMillis;
    wxGLContext  *wxGLRC;
    ofOrientation orientation;
    bool          bDoKeyTranslate;
