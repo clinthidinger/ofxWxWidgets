@@ -128,8 +128,8 @@ private:
 
    wxSize         mWxCursorSize;
    int            nFramesSinceWindowResized;
-   int			  windowMode;
-   bool			  bEnableSetupScreen;
+   int            windowMode;
+   bool           bEnableSetupScreen;
    ofBaseApp     *ofAppPtr;
    wxWindow      *glCanvasParentWnd;
    ofxWxGLCanvas *glCanvas;
